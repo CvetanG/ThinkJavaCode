@@ -36,11 +36,20 @@ public class Histogram {
         ArrayExamples.printArray(array);
 
         int[] scores = randomArray(30);
+        ArrayExamples.printArray(scores);
+        
         int a = inRange(scores, 90, 100);
         int b = inRange(scores, 80, 90);
         int c = inRange(scores, 70, 80);
         int d = inRange(scores, 60, 70);
         int f = inRange(scores, 0, 60);
+        
+        System.out.println("a= " + a);
+        System.out.println("b= " + b);
+        System.out.println("c= " + c);
+        System.out.println("d= " + d);
+        System.out.println("f= " + f);
+        System.out.println(a + b + c + d + f);
 
         // making a histogram
         int[] counts = new int[100];
@@ -48,12 +57,15 @@ public class Histogram {
             int index = scores[i];
             counts[index]++;
         }
+        ArrayExamples.printArray(counts);
 
         // histogram with enhanced for loop
         counts = new int[100];
         for (int score : scores) {
             counts[score]++;
         }
+        
+        ArrayExamples.printArray(counts);
     }
 
 }
